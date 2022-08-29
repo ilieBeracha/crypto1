@@ -1,0 +1,276 @@
+* {
+    font-family: 'Epilogue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sora', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.main {
+    z-index: 20;
+    width: 400px;
+    height: 450px;
+    background-color: #01C38D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 10px rgba(157, 154, 172, 0.15);
+}
+
+
+input {
+    border-radius: 10px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.details {
+    border-top: 2px solid #222831;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+form {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mainHeader {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    background-color: #222831;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.bacground1 {
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    right: 80%;
+    width: 200px;
+    height: 200px;
+    background-color: #01C38D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    -webkit-animation: fadein 6s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 6s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 6s;
+    /* Internet Explorer */
+    -o-animation: fadein 6s;
+    /* Opera < 12.1 */
+    animation: fadein 6s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+.bacground1 img {
+    width: 180px;
+    height: 180px;
+}
+
+
+.bacground2 {
+    z-index: 2;
+    position: absolute;
+    top: 60%;
+    right: 30%;
+    width: 200px;
+    height: 200px;
+    background-color: #01C38D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    -webkit-animation: fadein 5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 5s;
+    /* Internet Explorer */
+    -o-animation: fadein 5s;
+    /* Opera < 12.1 */
+    animation: fadein 5s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+.rainingBtc{
+    display: flex;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.rainingDiv{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    animation: drop 7s infinite;
+    animation-direction:normal;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(0);    
+      }
+      100% {
+        transform: translateY(105vh);
+      }
+}
+.imgBtcRain{
+    width: 24px;
+    height: 24px;
+}
