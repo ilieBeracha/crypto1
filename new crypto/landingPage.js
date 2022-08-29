@@ -32,14 +32,14 @@ function regexPhoneNum(e) {
 
 
 function rain(){
-    let counter = 0
+    // let counter = 0
     let rainingBtc = document.querySelector('.rainingBtc')
     var interval = setInterval(function(){
-        counter++
-        console.log(counter);
-        if(counter>=5){
-            clearInterval(interval)
-        }
+        // counter++
+        // console.log(counter);
+        // if(counter>=5){
+        //     clearInterval(interval)
+        // }
         let div = document.createElement('div')
         div.setAttribute('class','rainingDiv')
         let img = document.createElement('img')
