@@ -20,6 +20,10 @@ async function fetching() {
 async function loadCoins() {
     let coins = await fetching();
     let divAllCoins = document.querySelector('.allCoins')
+    let btnPrice = document.getElementById('btnPrice')
+    let btnMarketCap = document.getElementById('btnMarketCap')
+    let btnChange = document.getElementById('btnChange')
+    let btnRank = document.getElementById('btnRank')
     for (let i = 0; i < coins.length; i++) {
       if (!(coins[i].symbol.includes('US'))) {
         let divCoin = document.createElement('div');
@@ -41,6 +45,5 @@ async function loadCoins() {
         divAllCoins.append(divCoin)
       }
     }
-  
   }
   document.body.addEventListener('load', loadCoins())
