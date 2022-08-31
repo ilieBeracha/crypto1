@@ -169,3 +169,10 @@ html {
     font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.description button{
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    background-color: #01C38D;
+    border: none;
+}

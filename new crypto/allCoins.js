@@ -127,7 +127,7 @@ async function loadCoins() {
       }
     } else if(btnChange.innerText === 'change below'){
       wrapDiv.innerHTML = ""
-      btnMarketCap.innerText = 'chance'
+      btnChange.innerText = 'chance'
       let coinsArrPrice = coins
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
