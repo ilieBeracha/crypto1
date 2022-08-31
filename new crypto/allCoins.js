@@ -2,7 +2,6 @@ var baseUrl = 'https://api.coinranking.com/v2/coins';
 var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
 var apiKey = "coinranking766bf45217a0898add10146928f3c15774e25c3af6e3445c"
 
-
 async function fetching() {
   let fetchApi = await fetch(`${proxyUrl}${baseUrl}`, {
     method: "GET",
@@ -19,23 +18,20 @@ async function fetching() {
 
 async function loadCoins() {
   let coins = await fetching();
-  let divAllCoins = document.querySelector('.allCoins')
   let wrapDiv = document.querySelector('.wrapDiv')
   let btnPrice = document.getElementById('btnPrice')
   let btnMarketCap = document.getElementById('btnMarketCap')
   let btnChange = document.getElementById('btnChange')
+  let coinsArrPrice = coins
   for (let i = 0; i < coins.length; i++) {
     if (!(coins[i].symbol.includes('US'))) {
       createDiv(coins[i].iconUrl, coins[i].symbol, coins[i].price, coins[i].marketCap, coins[i].change, coins[i].rank)
     }
   }
-
-
   btnPrice.addEventListener('click', function () {
     if (btnPrice.innerText === 'price') {
       wrapDiv.innerHTML = ""
       btnPrice.innerText = 'price top'
-      let coinsArrPrice = coins
       coinsArrPrice.sort((a, b) => b.price - a.price)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
@@ -45,7 +41,6 @@ async function loadCoins() {
     } else if (btnPrice.innerText === 'price top') {
       wrapDiv.innerHTML = ""
       btnPrice.innerText = 'price below'
-      let coinsArrPrice = coins
       coinsArrPrice.sort((a, b) => a.price - b.price)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
@@ -55,24 +50,18 @@ async function loadCoins() {
     } else if (btnPrice.innerText === 'price below') {
       wrapDiv.innerHTML = ""
       btnPrice.innerText = 'price'
-      let coinsArrPrice = coins
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-
     }
-
   })
-
-
   btnMarketCap.addEventListener('click', function () {
     if (btnMarketCap.innerText === 'market cap') {
       wrapDiv.innerHTML = ""
       btnMarketCap.innerText = 'market cap top'
-      let coinsArrPrice = coins
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
@@ -82,7 +71,6 @@ async function loadCoins() {
     } else if (btnMarketCap.innerText === 'market cap top') {
       wrapDiv.innerHTML = ""
       btnMarketCap.innerText = 'market cap below'
-      let coinsArrPrice = coins
       coinsArrPrice.sort((a, b) => a.marketCap - b.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
@@ -92,7 +80,6 @@ async function loadCoins() {
     } else if (btnMarketCap.innerText === 'market cap below') {
       wrapDiv.innerHTML = ""
       btnMarketCap.innerText = 'market cap'
-      let coinsArrPrice = coins
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
@@ -101,13 +88,9 @@ async function loadCoins() {
       }
     }
   })
-
-
-
   btnChange.addEventListener('click', function () {
     if (btnChange.innerText === 'change') {
       wrapDiv.innerHTML = ""
-      let coinsArrPrice = coins
       btnChange.innerText = 'change above'
       coinsArrPrice.sort((a, b) => b.change - a.change)
       for (let i = 0; i < coinsArrPrice.length; i++) {
@@ -115,9 +98,8 @@ async function loadCoins() {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-    } else if(btnChange.innerText === 'change above'){
+    } else if (btnChange.innerText === 'change above') {
       wrapDiv.innerHTML = ""
-      let coinsArrPrice = coins
       btnChange.innerText = 'change below'
       coinsArrPrice.sort((a, b) => a.change - b.change)
       for (let i = 0; i < coinsArrPrice.length; i++) {
@@ -125,10 +107,9 @@ async function loadCoins() {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-    } else if(btnChange.innerText === 'change below'){
+    } else if (btnChange.innerText === 'change below') {
       wrapDiv.innerHTML = ""
-      btnChange.innerText = 'chance'
-      let coinsArrPrice = coins
+      btnChange.innerText = 'change'
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
