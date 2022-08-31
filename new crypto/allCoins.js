@@ -18,32 +18,148 @@ async function fetching() {
 }
 
 async function loadCoins() {
-    let coins = await fetching();
-    let divAllCoins = document.querySelector('.allCoins')
-    let btnPrice = document.getElementById('btnPrice')
-    let btnMarketCap = document.getElementById('btnMarketCap')
-    let btnChange = document.getElementById('btnChange')
-    let btnRank = document.getElementById('btnRank')
-    for (let i = 0; i < coins.length; i++) {
-      if (!(coins[i].symbol.includes('US'))) {
-        let divCoin = document.createElement('div');
-        divCoin.setAttribute('class', 'coin');
-        let img = document.createElement('img');
-        img.src = coins[i].iconUrl
-        let symbol = document.createElement('p');
-        symbol.innerText = coins[i].symbol
-        let coinPrice = document.createElement('p');
-        parseFloat(coins[i].price).toFixed(2)
-        coinPrice.innerText = parseFloat(coins[i].price).toFixed(2)
-        let marketCap = document.createElement('p');
-        marketCap.innerText = coins[i].marketCap
-        let change = document.createElement('p');
-        change.innerText = coins[i].change + "%"
-        let rank = document.createElement('p');
-        rank.innerText = coins[i].rank
-        divCoin.append(img, symbol, coinPrice, marketCap, change, rank)
-        divAllCoins.append(divCoin)
-      }
+  let coins = await fetching();
+  let divAllCoins = document.querySelector('.allCoins')
+  let wrapDiv = document.querySelector('.wrapDiv')
+  let btnPrice = document.getElementById('btnPrice')
+  let btnMarketCap = document.getElementById('btnMarketCap')
+  let btnChange = document.getElementById('btnChange')
+  for (let i = 0; i < coins.length; i++) {
+    if (!(coins[i].symbol.includes('US'))) {
+      createDiv(coins[i].iconUrl, coins[i].symbol, coins[i].price, coins[i].marketCap, coins[i].change, coins[i].rank)
     }
   }
-  document.body.addEventListener('load', loadCoins())
+
+
+  btnPrice.addEventListener('click', function () {
+    if (btnPrice.innerText === 'price') {
+      wrapDiv.innerHTML = ""
+      btnPrice.innerText = 'price top'
+      let coinsArrPrice = coins
+      coinsArrPrice.sort((a, b) => b.price - a.price)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    } else if (btnPrice.innerText === 'price top') {
+      wrapDiv.innerHTML = ""
+      btnPrice.innerText = 'price below'
+      let coinsArrPrice = coins
+      coinsArrPrice.sort((a, b) => a.price - b.price)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    } else if (btnPrice.innerText === 'price below') {
+      wrapDiv.innerHTML = ""
+      btnPrice.innerText = 'price'
+      let coinsArrPrice = coins
+      coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+
+    }
+
+  })
+
+
+  btnMarketCap.addEventListener('click', function () {
+    if (btnMarketCap.innerText === 'market cap') {
+      wrapDiv.innerHTML = ""
+      btnMarketCap.innerText = 'market cap top'
+      let coinsArrPrice = coins
+      coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    } else if (btnMarketCap.innerText === 'market cap top') {
+      wrapDiv.innerHTML = ""
+      btnMarketCap.innerText = 'market cap below'
+      let coinsArrPrice = coins
+      coinsArrPrice.sort((a, b) => a.marketCap - b.marketCap)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    } else if (btnMarketCap.innerText === 'market cap below') {
+      wrapDiv.innerHTML = ""
+      btnMarketCap.innerText = 'market cap'
+      let coinsArrPrice = coins
+      coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    }
+  })
+
+
+
+  btnChange.addEventListener('click', function () {
+    if (btnChange.innerText === 'change') {
+      wrapDiv.innerHTML = ""
+      let coinsArrPrice = coins
+      btnChange.innerText = 'change above'
+      coinsArrPrice.sort((a, b) => b.change - a.change)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    } else if(btnChange.innerText === 'change above'){
+      wrapDiv.innerHTML = ""
+      let coinsArrPrice = coins
+      btnChange.innerText = 'change below'
+      coinsArrPrice.sort((a, b) => a.change - b.change)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    } else if(btnChange.innerText === 'change below'){
+      wrapDiv.innerHTML = ""
+      btnMarketCap.innerText = 'chance'
+      let coinsArrPrice = coins
+      coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
+      for (let i = 0; i < coinsArrPrice.length; i++) {
+        if (!(coins[i].symbol.includes('US'))) {
+          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
+        }
+      }
+    }
+  })
+}
+document.body.addEventListener('load', loadCoins())
+
+
+function createDiv(image, names, prices, cap, changes, ranks) {
+  let divAllCoins = document.querySelector('.allCoins')
+  let wrapDiv = document.querySelector('.wrapDiv')
+  let divCoin = document.createElement('div');
+  divCoin.setAttribute('class', 'coin');
+  let img = document.createElement('img');
+  img.src = image
+  let symbol = document.createElement('p');
+  symbol.innerText = names
+  let coinPrice = document.createElement('p');
+  parseFloat(prices).toFixed(2)
+  coinPrice.innerText = parseFloat(prices).toFixed(2)
+  let marketCap = document.createElement('p');
+  marketCap.innerText = cap
+  let change = document.createElement('p');
+  change.innerText = changes + "%"
+  let rank = document.createElement('p');
+  rank.innerText = ranks
+  divCoin.append(img, symbol, coinPrice, marketCap, change, rank)
+  wrapDiv.append(divCoin)
+  divAllCoins.append(wrapDiv)
+}

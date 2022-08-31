@@ -91,7 +91,8 @@ html {
 .allCoins {
     width: 100%;
     height: 100%;
-    
+    display: flex;
+    flex-direction: column;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -128,10 +129,9 @@ html {
     to   { opacity: 1; }
 }
 
-
 .coin {
     width: 100%;
-    height: 8%;
+    height: 5%;
     border-top: 1px solid white;
     display: flex;
     justify-content: space-around;
