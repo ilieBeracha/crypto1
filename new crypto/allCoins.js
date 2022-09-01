@@ -61,15 +61,6 @@ async function loadCoins() {
   btnMarketCap.addEventListener('click', function () {
     if (btnMarketCap.innerText === 'market cap') {
       wrapDiv.innerHTML = ""
-      btnMarketCap.innerText = 'market cap top'
-      coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
-      for (let i = 0; i < coinsArrPrice.length; i++) {
-        if (!(coins[i].symbol.includes('US'))) {
-          createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
-        }
-      }
-    } else if (btnMarketCap.innerText === 'market cap top') {
-      wrapDiv.innerHTML = ""
       btnMarketCap.innerText = 'market cap below'
       coinsArrPrice.sort((a, b) => a.marketCap - b.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
@@ -132,8 +123,8 @@ function createDiv(image, names, prices, cap, changes, ranks) {
   let symbol = document.createElement('p');
   symbol.innerText = names
   let coinPrice = document.createElement('p');
-  parseFloat(prices).toFixed(2)
-  coinPrice.innerText = parseFloat(prices).toFixed(2)
+  // parseFloat(prices).toFixed(2)
+  coinPrice.innerText = parseFloat(prices).toFixed(4)
   let marketCap = document.createElement('p');
   marketCap.innerText = cap
   let change = document.createElement('p');
