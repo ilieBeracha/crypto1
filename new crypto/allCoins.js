@@ -31,23 +31,23 @@ async function loadCoins() {
   btnPrice.addEventListener('click', function () {
     if (btnPrice.innerText === 'price') {
       wrapDiv.innerHTML = ""
-      btnPrice.innerText = 'price top'
+      btnPrice.innerText = 'price ↑'
       coinsArrPrice.sort((a, b) => b.price - a.price)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-    } else if (btnPrice.innerText === 'price top') {
+    } else if (btnPrice.innerText === 'price ↑') {
       wrapDiv.innerHTML = ""
-      btnPrice.innerText = 'price below'
+      btnPrice.innerText = 'price ↓'
       coinsArrPrice.sort((a, b) => a.price - b.price)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-    } else if (btnPrice.innerText === 'price below') {
+    } else if (btnPrice.innerText === 'price ↓') {
       wrapDiv.innerHTML = ""
       btnPrice.innerText = 'price'
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
@@ -61,14 +61,14 @@ async function loadCoins() {
   btnMarketCap.addEventListener('click', function () {
     if (btnMarketCap.innerText === 'market cap') {
       wrapDiv.innerHTML = ""
-      btnMarketCap.innerText = 'market cap below'
+      btnMarketCap.innerText = 'market cap ↓'
       coinsArrPrice.sort((a, b) => a.marketCap - b.marketCap)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-    } else if (btnMarketCap.innerText === 'market cap below') {
+    } else if (btnMarketCap.innerText === 'market cap ↓') {
       wrapDiv.innerHTML = ""
       btnMarketCap.innerText = 'market cap'
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
@@ -82,23 +82,23 @@ async function loadCoins() {
   btnChange.addEventListener('click', function () {
     if (btnChange.innerText === 'change') {
       wrapDiv.innerHTML = ""
-      btnChange.innerText = 'change above'
+      btnChange.innerText = 'change ↑'
       coinsArrPrice.sort((a, b) => b.change - a.change)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-    } else if (btnChange.innerText === 'change above') {
+    } else if (btnChange.innerText === 'change ↑') {
       wrapDiv.innerHTML = ""
-      btnChange.innerText = 'change below'
+      btnChange.innerText = 'change ↓'
       coinsArrPrice.sort((a, b) => a.change - b.change)
       for (let i = 0; i < coinsArrPrice.length; i++) {
         if (!(coins[i].symbol.includes('US'))) {
           createDiv(coinsArrPrice[i].iconUrl, coinsArrPrice[i].symbol, coinsArrPrice[i].price, coinsArrPrice[i].marketCap, coinsArrPrice[i].change, coinsArrPrice[i].rank)
         }
       }
-    } else if (btnChange.innerText === 'change below') {
+    } else if (btnChange.innerText === 'change ↓') {
       wrapDiv.innerHTML = ""
       btnChange.innerText = 'change'
       coinsArrPrice.sort((a, b) => b.marketCap - a.marketCap)
