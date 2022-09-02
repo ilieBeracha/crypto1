@@ -123,8 +123,7 @@ function createDiv(image, names, prices, cap, changes, ranks) {
   let symbol = document.createElement('p');
   symbol.innerText = names
   let coinPrice = document.createElement('p');
-  // parseFloat(prices).toFixed(2)
-  coinPrice.innerText = parseFloat(prices).toFixed(4)
+  coinPrice.innerText = parseFloat(prices).toFixed(6)
   let marketCap = document.createElement('p');
   marketCap.innerText = cap
   let change = document.createElement('p');
