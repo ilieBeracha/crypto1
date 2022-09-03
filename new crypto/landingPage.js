@@ -4,7 +4,6 @@ function regexPhoneNum(e) {
     if (!inputNum.value.match(validNum)) {
         e.preventDefault()
         inputNum.style.border = '2px solid red'
-        // inputNum.style.borderColor = "red"
     } else {
         inputNum.style.borderColor = "revert"
     }
@@ -24,16 +23,11 @@ function regexPhoneNum(e) {
 
 
 function rain(){
-    // let counter = 0
     let rainingBtc = document.querySelector('.rainingBtc')
     var interval = setInterval(function(){
-        // counter++
-        // console.log(counter);
-        // if(counter>=5){
-        //     clearInterval(interval)
-        // }
         let div = document.createElement('div')
         div.setAttribute('class','rainingDiv')
+        console.log(div);
         let img = document.createElement('img')
         div.style.left = Math.floor(Math.random()*70)+'%'
         div.style.top = "0"
