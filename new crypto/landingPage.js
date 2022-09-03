@@ -1,11 +1,3 @@
-// function insertPhoneNumber(e){
-//     let inputNum = document.getElementById('phoneNumber')
-//     if(inputNum.value===""){
-//         e.preventDefault()
-//     } 
-// }
-
-
 function regexPhoneNum(e) {
     let validNum = /^[0][5][0|2|3|4|5|9]{1}[-]{0,1}[0-9]{7}$/
     let inputNum = document.getElementById('phoneNumber')
