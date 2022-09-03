@@ -16,6 +16,7 @@ async function fetching() {
   })
   fetchApi = await fetchApi.json()
   fetchApi = await fetchApi.data.coins
+  console.log(fetchApi)
   return fetchApi
 }
 

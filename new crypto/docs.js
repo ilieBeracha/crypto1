@@ -10,24 +10,31 @@ async function fetchNews() {
 async function createDivAndPrint(){
     let articles = await fetchNews();
     console.log(articles);
-    for (let i = 0; i < 15; i++) {
+    let counter =0
+    setInterval(function(){
         let allNews = document.querySelector('.news')
-        let divNews = document.createElement('div')
-        divNews.setAttribute('class','divNews');
-        let img = document.createElement('img');
-        img.src = articles[i].image_url
-        let header = document.createElement('h6');
-        header.innerText = articles[i].title
-        let content = document.createElement('p');
-        content.innerText = articles[i].text
-        let date = document.createElement('p')
-        date.innerText = articles[i].date
-        divNews.append(header ,img ,content,date)
-        allNews.append(divNews)
-        divNews.addEventListener('click',function(){
-            location.href = articles[i].news_url;
-        })
-    }
+            allNews.innerHTML="";
+        for (let i = 0; i < 2; i++) {
+            counter++
+            console.log(counter);
+            let divNews = document.createElement('div')
+            divNews.setAttribute('class','divNews');
+            let img = document.createElement('img');
+            img.src = articles[counter].image_url
+            let header = document.createElement('h3');
+            header.innerText = articles[counter].title
+            let content = document.createElement('p');
+            content.innerText = articles[counter].text
+            let date = document.createElement('p')
+            date.innerText = articles[counter].date
+            divNews.append(header ,img ,content,date)
+            allNews.append(divNews)
+            divNews.addEventListener('click',function(){
+                location.href = articles[i].news_url;
+            })
+        }
+    },5000)
+    
 }
 createDivAndPrint()
 
