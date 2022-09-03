@@ -16,6 +16,9 @@ async function createDivAndPrint(){
             allNews.innerHTML="";
         for (let i = 0; i < 2; i++) {
             counter++
+            if(counter===articles.length){
+                counter=0
+            }
             console.log(counter);
             let divNews = document.createElement('div')
             divNews.setAttribute('class','divNews');
