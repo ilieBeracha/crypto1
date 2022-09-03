@@ -113,15 +113,17 @@ html {
     justify-content: space-between;
     align-items: center;
     width: 500px;
-    height: 500px;
-    border: 1px solid black;
-    overflow-y: scroll;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 700px;
+    border: 3px solid black;
+    /* overflow-y: scroll; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
     padding-bottom: 10px;
-    background-color: #888888;
+    background-color: #191d24;
     border-radius: 10px;
     text-align: center;
+    color: white;
+    padding: 10px;
     
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -183,8 +185,9 @@ html {
 }
 
 .divNews:hover {
-    background-color: #c4d1de;
+    background-color: #555960;
     cursor: pointer;
+    color: black;
 }
 
 img {

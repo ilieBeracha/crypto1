@@ -18,6 +18,7 @@ async function fetching() {
 
 async function loadCoins() {
   let coins = await fetching();
+  console.log(coins[0]);
   let divAllCoins = document.querySelector('.allCoins')
   for (let i = 0; i < 10; i++) {
     if (!(coins[i].symbol.includes('US'))) {
