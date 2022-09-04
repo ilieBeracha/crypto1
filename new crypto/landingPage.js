@@ -36,7 +36,7 @@ function rain(){
         img.style.color = "white"
         div.append(img)
         rainingBtc.append(div)
-    },2200)
+    },3000)
 }
 rain()
 
