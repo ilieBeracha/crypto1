@@ -406,6 +406,6 @@ printEthereumChart()
 updateCosmosPrice()
 printCosmosChart()
 
-
-
-
+if(localStorage.getItem('dark')) {
+  document.body.classList.add('dark');
+}

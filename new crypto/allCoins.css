@@ -3,6 +3,9 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Sora', sans-serif;
 }
+.dark{
+    filter: invert(100%) hue-rotate(180deg);
+}
 
 body,
 html {
@@ -92,6 +95,8 @@ html {
     width: 100%;
     height: 100%;
     display: flex;
+    overflow-y: scroll;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -99,6 +104,21 @@ html {
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
 }
+
+.allCoins::-webkit-scrollbar {
+    width: 12px;
+}
+
+.allCoins::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+}
+
+.allCoins::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 
 @keyframes fadein {
     from { opacity: 0; }

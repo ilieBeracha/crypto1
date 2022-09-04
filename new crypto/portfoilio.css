@@ -4,6 +4,10 @@
     font-family: 'Sora', sans-serif;
 }
 
+.dark{
+    filter: invert(100%) hue-rotate(180deg);
+}
+
 body,
 html {
     width: 100vw;
@@ -195,12 +199,21 @@ input{
     height: 30px;
     border-radius: 10px;
     text-align: center;
+    background-color: #22272f;
+    color: white;
 }
 select{
     width: 100px;
     height: 30px;
     border: none;
     border-radius: 10px;
+    background-color: #22272f;
+    color: white;
+}
+
+option{
+    background-color: aliceblue;
+    color: black;
 }
 #amountAfterCheck{
     display: none;

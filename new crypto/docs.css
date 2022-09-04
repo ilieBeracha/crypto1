@@ -4,6 +4,9 @@
     font-family: 'Sora', sans-serif;
 }
 
+.dark{
+    filter: invert(100%) hue-rotate(180deg);
+}
 body,
 html {
     width: 100vw;

@@ -140,3 +140,7 @@ button {
     border: none;
     border-radius: 10px;
 }
+
+.dark{
+    filter: invert(100%) hue-rotate(180deg);
+}

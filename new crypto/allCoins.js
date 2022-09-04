@@ -135,3 +135,6 @@ function createDiv(image, names, prices, cap, changes, ranks) {
   wrapDiv.append(divCoin)
   divAllCoins.append(wrapDiv)
 }
+if(localStorage.getItem('dark')) {
+  document.body.classList.add('dark');
+}

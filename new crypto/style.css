@@ -4,6 +4,10 @@
     font-family: 'Rubik', sans-serif;
     font-family: 'Sora', sans-serif;
 } */
+.dark{
+    filter: invert(100%) hue-rotate(180deg);
+    background-color: aliceblue;
+}
 
 body {
     width: 100vw;
@@ -194,7 +198,7 @@ body {
 }
 
 .allCoins {
-    width: 70%;
+    width: 68%;
     margin: 30px;
     height: 80%;
     /* border: 2px solid white; */
@@ -271,15 +275,15 @@ body {
 
 
 .mainHit {
-    width: 100%;
+    width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .allOther {
-    width: 30%;
+    width: 20%;
     height: 80%;
     /* border: 2px solid white; */
     border-radius: 10px;

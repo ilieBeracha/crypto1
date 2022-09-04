@@ -73,7 +73,7 @@ async function calculate(e) {
 }
 
 
-
-
-
+if (localStorage.getItem('dark')) {
+    document.body.classList.add('dark');
+}
 

@@ -39,10 +39,8 @@ async function createDivAndPrint() {
 createDivAndPrint()
 setInterval(createDivAndPrint,5000)
 
-
-
-
-
-
+if(localStorage.getItem('dark')) {
+    document.body.classList.add('dark');
+}
 
 
