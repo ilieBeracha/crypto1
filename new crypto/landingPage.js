@@ -27,6 +27,9 @@ function rain(){
     var interval = setInterval(function(){
         let div = document.createElement('div')
         div.setAttribute('class','rainingDiv')
+        if(div>5){
+            return
+        }
         console.log(div);
         let img = document.createElement('img')
         div.style.left = Math.floor(Math.random()*70)+'%'
