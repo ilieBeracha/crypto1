@@ -1,23 +1,16 @@
 let toggleMode = document.getElementById('toggleMode')
-// toggleMode.addEventListener('click', function () {
-//     let body = document.body;
-//     let toggleText = document.getElementById('toggleText')
-//     if (toggleText.innerText === "light mode") {
-//         toggleText.innerText = 'dark mode'
-//         body.style.backgroundColor = "white"
-//     } else {
-//         toggleText.innerText = 'light mode'
-//         body.style.backgroundColor = "revert"
-//     }
-// })
+let toggleText = document.getElementById('toggleText')
 
 toggleMode.addEventListener('change', function () {
     localStorage.setItem('dark', this.checked);
     if (this.checked) {
         document.body.classList.add('dark')
+        toggleText.innerText = "light mode"
     } else {
         document.body.classList.remove('dark')
         localStorage.removeItem('dark')
+        toggleText.innerText = "dark mode"
+
     }
 });
 
