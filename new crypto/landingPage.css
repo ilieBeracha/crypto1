@@ -3,6 +3,19 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Sora', sans-serif;
 }
+.dark{
+    filter: invert(100%) hue-rotate(180deg);
+    background-color: aliceblue;
+}
+.checkboxDarkDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#checkboxDark{
+    width: 20px;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -37,6 +50,8 @@ input {
     height: 30px;
     border: none;
     text-align: center;
+    background-color: #222831;
+    color: white;
 }
 
 .header {

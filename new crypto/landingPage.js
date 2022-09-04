@@ -40,3 +40,23 @@ function rain(){
 }
 rain()
 
+let toggleMode = document.getElementById('checkboxDark')
+let toggleText = document.getElementById('checkboxDarkLabel')
+
+toggleMode.addEventListener('change', function () {
+    localStorage.setItem('dark', this.checked);
+    if (this.checked) {
+        document.body.classList.add('dark')
+        toggleText.innerText = "light mode"
+    } else {
+        document.body.classList.remove('dark')
+        localStorage.removeItem('dark')
+        toggleText.innerText = "dark mode"
+
+    }
+});
+
+if(localStorage.getItem('dark')) {
+    document.body.classList.add('dark');
+  }
+  
