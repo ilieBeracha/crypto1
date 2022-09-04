@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 5px;
 }
 #checkboxDark{
     width: 20px;
