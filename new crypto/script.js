@@ -312,7 +312,7 @@ async function printCosmosChart() {
         label: "",
         data: prices,
         backgroundColor: gradient,
-        borderColor: 'rgba(70,70,110,200)',
+        borderColor: 'rgba(70,70,150,200)',
         borderJoinStyle: 'round',
         borderCapStyle: 'round',
         borderWidth: 3,

@@ -6,7 +6,7 @@
 } */
 .dark{
     filter: invert(100%) hue-rotate(180deg);
-    background-color: aliceblue;
+    background-color: rgb(206, 210, 213);
 }
 
 body {
