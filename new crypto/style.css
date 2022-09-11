@@ -509,6 +509,54 @@ canvas {
     border-radius: 10px;
 }
 
-/* @media only screen and (max-width: 800px) {
-  
-} */
+@media only screen and (max-width: 800px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 5%;
+    }
+    .main{
+       margin-top: 500px;
+    }
+    .header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .header_menu{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .header_h1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hits{
+        margin-top: 250px;
+        margin: 0;
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        margin-top: 200px;
+    }
+    .hit1 , .hit2, .hit3{
+        /* width: 200px; */
+    }
+    canvas{
+        width: 300px;
+        height: 100px;
+    }
+}
