@@ -268,6 +268,13 @@ button {
 }
 
 
+#menuBtn{
+    display: none;
+    background-color: #01C38D;
+    color: #132d47;
+    border-radius: 30px;
+}
+
 
 .rainingDiv{
     position: relative;
