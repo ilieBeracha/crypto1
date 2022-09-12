@@ -235,6 +235,7 @@ html {
         width: 100%;
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         display: none;
@@ -249,6 +250,10 @@ html {
     }
     #menuBtn{
         display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        font-weight: bold;
     }
     .coin{
         display: flex;
@@ -263,6 +268,75 @@ html {
     }
     .coin p{
         font-size: 8px;
+    }
+    .coin img{
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+@media only screen and (max-width: 1500px) {
+    *{
+        font-size: 10px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .main{
+       /* margin-top: 500px; */
+       margin: 0;
+    }
+    .header{
+        margin-top: 200px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .header_menu{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: none;
+    }
+    .header_h1{
+        margin-top: 50px;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        /* align-items: center; */
+    }
+    #menuBtn{
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .coin{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* padding: 5px; */
+        padding-left: 20px;
+    }
+    .wrapDiv p {
+        font-size: 8px;
+        margin-left: 20px;
+    }
+    .coin p{
+        font-size: 12px;
     }
     .coin img{
         width: 20px;

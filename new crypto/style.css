@@ -640,3 +640,128 @@ canvas {
         height: 50px;
     }
 }
+
+@media only screen and (max-width: 1500px) {
+    *{
+        font-size: 12px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .main{
+       margin: 0;
+    }
+    .header{
+        margin-top: 200px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .header_menu{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: none;
+    }
+    .header_h1{
+        margin-top: 50px;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        /* align-items: center; */
+    }
+    .hits{
+        margin-top: 250px;
+        margin: 0;
+        gap: 50px;
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        margin-top: 0;
+        gap: 50px;
+    }
+    .hit2{
+        width: 300px;
+        height: 180px;
+        /* display: none; */
+    }
+    .hit1 , .hit3{
+        /* display: none; */
+    }
+    canvas{
+        width: 300px;
+        height: 180px;
+    }
+    .mainHit{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 50px;
+    }
+    .allCoins{
+        width: 90%;
+        height: 400px;
+        padding-left: 30px;
+        font-size: 15px;
+    }
+    .allOther{
+        width: 80%;
+        height:460px;
+    }
+    #menuBtn{
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .coin p{
+        font-size: 8px;
+    }
+    .coin img{
+        width: 20px;
+        height: 20px;
+    }
+    .allOther p{
+        font-size: 15px;
+    }
+    .allOther img{
+        width: 20px;
+        height: 20px;
+    }
+    .responsiveText{
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        display: block;
+        width: 50%;
+        border:1px solid white;
+        text-align: center;
+        color: #01C38D;
+        
+    }
+    .right{
+        width: 80%;
+    }
+    .left{
+        margin-top: 50px;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    .change24Div{
+        height: 50px;
+    }
+}
