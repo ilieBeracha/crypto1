@@ -406,6 +406,22 @@ printEthereumChart()
 updateCosmosPrice()
 printCosmosChart()
 
-if(localStorage.getItem('dark')) {
+if (localStorage.getItem('dark')) {
   document.body.classList.add('dark');
 }
+let menuBtn = document.getElementById('menuBtn')
+
+menuBtn.addEventListener('click', function () {
+  let header_menu = document.querySelector('.header_menu');
+  let main = document.querySelector('.main');
+  if (menuBtn.innerText == "x") {
+    header_menu.style.display = "flex"
+    header_menu.style.backgroundColor = "#393E46"
+    main.style.marginTop = "150px"
+    menuBtn.innerText= '-'
+  } else if(menuBtn.innerText=='-'){
+    header_menu.style.display="none";
+    main.style.marginTop="0px"
+    menuBtn.innerText='x'
+  }
+})
