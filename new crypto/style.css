@@ -560,13 +560,14 @@ canvas {
     .hits{
         margin-top: 250px;
         margin: 0;
-        gap: 20px;
+        gap: 50px;
     }
     .main{
         height: 100%;
         width: 100%;
         margin: 0;
         margin-top: 0;
+        gap: 50px;
     }
     .hit2{
         width: 300px;
@@ -584,13 +585,16 @@ canvas {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
+        gap: 50px;
     }
     .allCoins{
         width: 90%;
-        /* height: 300px; */
+        height: 400px;
+        padding-left: 30px;
     }
     .allOther{
         width: 80%;
+        height:460px;
     }
     #menuBtn{
         display: block;
@@ -615,7 +619,7 @@ canvas {
         border-radius: 20px;
         display: block;
         width: 50%;
-        border:1px solid #01C38D;
+        border:1px solid white;
         text-align: center;
         color: #01C38D;
         
@@ -627,5 +631,8 @@ canvas {
         margin-top: 50px;
         margin-bottom: 10px;
         width: 80%;
+    }
+    .change24Div{
+        height: 50px;
     }
 }
