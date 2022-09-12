@@ -254,6 +254,8 @@ html {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        /* padding: 5px; */
+        padding-left: 20px;
     }
     .wrapDiv p {
         font-size: 8px;

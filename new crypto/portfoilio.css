@@ -278,5 +278,7 @@ option{
     }
     .mainDiv{
         margin: 10px;
+        width: 90%;
+        height: 60%;
     }
 }

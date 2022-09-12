@@ -586,7 +586,7 @@ canvas {
         margin-top: 20px;
     }
     .allCoins{
-        width: 100%;
+        width: 90%;
         /* height: 300px; */
     }
     .allOther{
@@ -621,7 +621,7 @@ canvas {
         
     }
     .right{
-        width: 100%;
+        width: 80%;
     }
     .left{
         margin-top: 50px;
