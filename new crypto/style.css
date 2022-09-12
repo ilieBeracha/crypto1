@@ -4,7 +4,7 @@
     font-family: 'Rubik', sans-serif;
     font-family: 'Sora', sans-serif;
 } */
-.dark{
+.dark {
     filter: invert(100%) hue-rotate(180deg);
     background-color: rgb(206, 210, 213);
 }
@@ -466,7 +466,7 @@ body {
     }
 }
 
-#menuBtn{
+#menuBtn {
     display: none;
     background-color: #01C38D;
     color: #132d47;
@@ -513,24 +513,28 @@ body {
 canvas {
     border-radius: 10px;
 }
-.responsiveText{
+
+.responsiveText {
     display: none;
 }
 
 @media only screen and (max-width: 800px) {
-    *{
+    * {
         font-size: 12px;
     }
-    body{
+
+    body {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 5%;
     }
-    .main{
-       margin: 0;
+
+    .main {
+        margin: 0;
     }
-    .header{
+
+    .header {
         margin-top: 200px;
         width: 100%;
         height: 200px;
@@ -540,7 +544,8 @@ canvas {
         margin: 0;
         padding: 0;
     }
-    .header_menu{
+
+    .header_menu {
         height: 150px;
         width: 100%;
         display: flex;
@@ -552,11 +557,18 @@ canvas {
         animation: fadeIn 3s;
 
     }
+
     @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-    .header_h1{
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .header_h1 {
         margin-top: 50px;
         width: 100%;
         height: 30%;
@@ -564,107 +576,140 @@ canvas {
         justify-content: space-evenly;
         /* align-items: center; */
     }
-    .hits{
+
+    .hits {
         margin-top: 250px;
         margin: 0;
         gap: 50px;
     }
-    .main{
+
+    .main {
         height: 100%;
         width: 100%;
         margin: 0;
         margin-top: 0;
-        gap: 50px;
+        gap: 60px;
     }
-    .hit2{
+
+    .hit2 {
         width: 300px;
         height: 180px;
         /* display: none; */
     }
-    .hit1 , .hit3{
+
+    .hit1,
+    .hit3 {
         display: none;
     }
-    canvas{
+
+    canvas {
         width: 300px;
         height: 180px;
     }
-    .mainHit{
+
+    .mainHit {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
         gap: 50px;
     }
-    .allCoins{
+
+    .allCoins {
         width: 90%;
         height: 400px;
         padding-left: 30px;
     }
-    .allCoins p{
+
+    .allCoins p {
         font-size: 12px;
     }
-    .allOther{
+
+    .allOther {
         width: 80%;
-        height:460px;
+        height: 460px;
     }
-    #menuBtn{
+
+    #menuBtn {
         display: block;
         width: 40px;
         height: 40px;
         font-size: 18px;
         font-weight: bold;
     }
-    .coin p{
+
+    .coin p {
         font-size: 12px;
     }
-    .coin img{
+
+    .coin img {
         width: 20px;
         height: 20px;
     }
-    .allOther p{
+
+    .allOther p {
         font-size: 12px;
     }
-    .allOther img{
+
+    .allOther img {
         width: 20px;
         height: 20px;
     }
-    .responsiveText{
-        margin-top: 10px;
+
+    .responsiveText {
+        margin-top: 20px;
         padding: 10px;
         border-radius: 20px;
         display: block;
         width: 50%;
-        border:1px solid white;
+        /* border: 1px solid white; */
         text-align: center;
-        color: #01C38D;
-        
+        animation: fadeIn 3s;
+
     }
-    .right{
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .right {
         width: 80%;
+        /* background-color: #01C38D; */
     }
-    .left{
+
+    .left {
         margin-top: 50px;
         margin-bottom: 10px;
         width: 80%;
     }
-    .change24Div{
+
+    .change24Div {
         height: 50px;
     }
 }
 
 @media only screen and (max-width: 1500px) {
-    *{
+    * {
         font-size: 12px;
     }
-    body{
+
+    body {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100%;
     }
-    .main{
-       margin: 0;
+
+    .main {
+        margin: 0;
     }
-    .header{
+
+    .header {
         margin-top: 200px;
         width: 100%;
         height: 200px;
@@ -674,7 +719,8 @@ canvas {
         margin: 0;
         padding: 0;
     }
-    .header_menu{
+
+    .header_menu {
         height: 150px;
         width: 100%;
         display: flex;
@@ -684,7 +730,8 @@ canvas {
         flex-wrap: wrap;
         display: none;
     }
-    .header_h1{
+
+    .header_h1 {
         margin-top: 50px;
         width: 100%;
         height: 30%;
@@ -692,87 +739,110 @@ canvas {
         justify-content: space-evenly;
         /* align-items: center; */
     }
-    .hits{
+
+    .hits {
         margin-top: 250px;
         margin: 0;
         gap: 50px;
     }
-    .main{
+
+    .main {
         height: 100%;
         width: 100%;
         margin: 0;
         margin-top: 0;
         gap: 50px;
     }
-    .hit2{
+
+    .hit2 {
         width: 300px;
         height: 180px;
         /* display: none; */
     }
-    .hit1 , .hit3{
+
+    .hit1,
+    .hit3 {
         /* display: none; */
     }
-    canvas{
+
+    canvas {
         width: 300px;
         height: 180px;
     }
-    .mainHit{
+
+    .mainHit {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
         gap: 50px;
     }
-    .allCoins{
+
+    .allCoins {
         width: 90%;
         height: 400px;
         padding-left: 30px;
         font-size: 15px;
     }
-    .allOther{
+
+    .allOther {
         width: 80%;
-        height:460px;
+        height: 460px;
     }
-    #menuBtn{
+
+    #menuBtn {
         display: block;
         width: 40px;
         height: 40px;
         font-size: 18px;
         font-weight: bold;
     }
-    .coin p{
+
+    .coin p {
         font-size: 12px;
     }
-    .coin img{
+
+    .coin img {
         width: 20px;
         height: 20px;
     }
-    .allOther p{
+
+    .allOther p {
         font-size: 15px;
     }
-    .allOther img{
+
+    .allOther img {
         width: 20px;
         height: 20px;
     }
-    .responsiveText{
+
+    .responsiveText {
         margin-top: 10px;
         padding: 10px;
         border-radius: 20px;
         display: block;
-        width: 50%;
-        border:1px solid white;
+        width: 40%;
+        background-color: #383d44;
+        padding: 10px 30px;
         text-align: center;
-        color: #01C38D;
-        
+        color: rgb(205, 200, 200);
+        animation: fadeIn 3s;
+
     }
-    .right{
-        width: 80%;
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+    .right {
+        width: 60%;
     }
-    .left{
+
+    .left {
         margin-top: 50px;
         margin-bottom: 10px;
-        width: 80%;
+        width: 60%;
     }
-    .change24Div{
+
+    .change24Div {
         height: 50px;
     }
 }
