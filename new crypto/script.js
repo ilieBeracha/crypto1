@@ -110,6 +110,7 @@ async function cosmosChart3() {
   let fetching = await fetch('https://min-api.cryptocompare.com/data/v2/histominute?fsym=SOL&tsym=USD&limit=119&api_key=0646cc7b8a4d4b54926c74e0b20253b57fd4ee406df79b3d57d5439874960146');
   fetching = await fetching.json();
   let data = fetching.Data.Data
+  console.log(data);
   const times = data.map(obj => obj.time)
   const prices = data.map(obj => obj.high)
   return {
